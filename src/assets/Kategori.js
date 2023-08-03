@@ -9,7 +9,7 @@ export const kategori = {
       'id': 2,
       'nama': 'Otomotif',
       'img' : 'otomotif1.jpg'
-    },
+    },  
     {
       'id': 3,
       'nama': 'Olahraga',

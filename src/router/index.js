@@ -6,7 +6,11 @@ import Produk from "@/view/Produk.vue"
 import Detail from "@/view/Detail.vue"
 import Kategori from "@/view/Kategori.vue"
 import KategoriProduk from "@/view/KategoriProduk.vue"
+
+import Login from "@/view/Login.vue"
 import NotFound from "@/view/NotFound.vue"
+import {users} from "../assets/user"
+
 
 const routes = [ 
   {
@@ -25,17 +29,6 @@ const routes = [
     component: Contact,
   },
   {
-    path: "/produk",
-    name: "Produk",
-    component: Produk,
-  },
-  {
-    path: "/detail/:id_produk",
-    name: "Detail",
-    component: Detail,
-    props: true
-  },
-  {
     path: "/kategori",
     name: "Kategori",
     component: Kategori,
@@ -46,11 +39,38 @@ const routes = [
     component: KategoriProduk,
     props: true,
   },
+  {
+    path:"/login",
+    name:"Login",
+    component :Login,
+  props : true
+  },
+  {
+    path: "/produk",
+    name: "Produk",
+    component: Produk,
+    beforeEnter: (to, from, next) => {
+      const loggedInUser = true;
+      if (loggedInUser) {
+        next(); // Lanjutkan navigasi ke halaman produk jika sudah login
+      } else {
+        next("/login"); // Alihkan ke halaman login jika belum login
+      }
+    },
+  },
+  {
+    path: "/detail/:id_produk",
+    name: "Detail",
+    component: Detail,
+    props: true
+  },
+ 
 {
   path:"/:pathMacth(.*)*",
   name:"NotFound",
   component :NotFound
-}
+},
+
 ];
 
 const router = createRouter({
