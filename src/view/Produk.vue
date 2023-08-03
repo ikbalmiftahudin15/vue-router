@@ -1,5 +1,8 @@
 <template>
+  <br>
+  <center>
   <h1>Produk</h1>
+  <br>
   <div class="flex-container">
     <div v-for="produk in state" :key="produk.id" class="card">
     <router-link class="container" :to="{ name: 'Detail', params: {id_produk: produk.id}}">
@@ -7,6 +10,7 @@
     </router-link>
     </div>
   </div>
+</center>
 </template>
 
 <script>

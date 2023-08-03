@@ -16,7 +16,7 @@
         <br>
     <button type="submit" class="bg-blue-500 hover:bg-600 text-white px-4 py-2 rounded">Login</button>
     </div>
-    </form>n
+    </form>
     </div>
 </center>
 </template>
@@ -37,7 +37,7 @@ export default {
             const foundUser = users.find(user => user.username == this.username && user.password == this.password && user.isLoggedIn == true);
             if (foundUser) {
                 alert('Login berhasil!');
-                this.$router.push('/produk');``
+                this.$router.push('/produk');
                 // Anda dapat melakukan navigasi ke halaman lain jika login berhasil
             } else {
                 alert('Username atau password salah');

@@ -1,4 +1,5 @@
 <template>
+   <center>
   <ul>
     <li>
       <router-link :class="{ active: rl_1 }" :to="{ name: 'Home' }"
@@ -24,11 +25,13 @@
       <router-link :class="{ active: rl_5 }" :to="{ name: 'Kategori'}">
       Kategori</router-link>
     </li>
-    <li>
+    
+    <li style="float: right;">
       <router-link :class="{ active: rl_6 }" :to="{ name: 'Login'}">
       Login</router-link>
     </li>
   </ul>
+</center>
 </template>
 
 <script>
@@ -109,7 +112,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color:	#32CD32;
 }
 
 li {
@@ -125,7 +128,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: 	#00FF00;
 }
 
 .active {
