@@ -15,7 +15,7 @@ const store = createStore ({
 		},
 		decrement(state){
 			if(state.count > 0){
-				state.count--;
+				state.count--; 
 			}
 		}
 	}

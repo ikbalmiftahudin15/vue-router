@@ -11,6 +11,7 @@ import Login from "@/view/Login.vue"
 import NotFound from "@/view/NotFound.vue"
 import { users } from "../assets/user"
 import Counter from "@/view/Counter.vue"
+import Todo from "@/view/Todo.vue"
 
 
 const routes = [ 
@@ -75,6 +76,11 @@ const routes = [
   path: "/counter",
   name: "Counter",
   component: Counter,
+ },
+ {
+  path: "/todo",
+  name: "Todo",
+  component: Todo,
  },
 ];
 

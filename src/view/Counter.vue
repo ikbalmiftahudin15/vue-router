@@ -1,4 +1,5 @@
 <template>
+    <center>
     <div id="app">
       <div class="counter"> 
         {{ counter }} 
@@ -6,6 +7,7 @@
       <button @click="increment" class="increment"> Tambah </button>
       <button @click="decrement" class="decrement"> Kurangi </button>
     </div>
+</center>
   </template>
   
   <script>
