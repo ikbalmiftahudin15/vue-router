@@ -1,6 +1,10 @@
 <template>
+  <br>
+  <br>
   <center>
   <h1>Kategori</h1>
+  <br>
+  <br>
   <div class="flex-container">
     <div v-for="kategori in state" :key="kategori.id" class="card">
       <img :src="getImgSrc(kategori.img)" alt="Category Image">

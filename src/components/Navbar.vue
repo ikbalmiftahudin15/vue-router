@@ -25,7 +25,6 @@
       <router-link :class="{ active: rl_5 }" :to="{ name: 'Kategori'}">
       Kategori</router-link>
     </li>
-    
     <li style="float: right;">
       <router-link :class="{ active: rl_6 }" :to="{ name: 'Login'}">
       Login</router-link>

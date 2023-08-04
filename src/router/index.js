@@ -9,7 +9,8 @@ import KategoriProduk from "@/view/KategoriProduk.vue"
 
 import Login from "@/view/Login.vue"
 import NotFound from "@/view/NotFound.vue"
-import {users} from "../assets/user"
+import { users } from "../assets/user"
+import Counter from "@/view/Counter.vue"
 
 
 const routes = [ 
@@ -70,7 +71,11 @@ const routes = [
   name:"NotFound",
   component :NotFound
 },
-
+{
+  path: "/counter",
+  name: "Counter",
+  component: Counter,
+ },
 ];
 
 const router = createRouter({
